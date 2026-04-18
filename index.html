@@ -6,8 +6,12 @@
     <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen" style="background-image: url('macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2880x1800-1455.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
+<body class="min-h-screen" style="background-image: url('12-Dark.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<div id="welcome-text" class="fixed inset-0 flex flex-col items-center justify-center z-0 pointer-events-none">
+    <p class="text-white/80 text-5xl font-light">Welcome.</p>
+    <p class="text-white/40 text-xl font-light mt-2">to the calmer side of the internet</p>
+    <p class="text-white/40 text-xl font-light mt-2">still not done</p>
+</div>
 <main class="min-h-screen flex items-center justify-center px-8 pb-24">
     <div id="window" class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
         <!-- Title bar -->
@@ -39,12 +43,12 @@
             <!-- Projects -->
             <p class="text-xs uppercase tracking-widest text-white/30 mb-3">Projects</p>
             <div class="grid grid-cols-2 gap-6 mb-8">
-                <div class="glass2 rounded-xl p-4 hover:scale-110 transition-all">
+                <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
                     <p class="text-white font-medium mb-1">Yo Room</p>
                     <p class="text-white/40 text-xs leading-relaxed">Yoga studio website with booking and custom cursor</p>
                     <p class="text-indigo-400 text-xs mt-2">HTML · CSS · JS</p>
                 </div>
-                <div class="glass2 rounded-xl p-4 hover:scale-110 transition-all">
+                <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
                     <p class="text-white font-medium mb-1">Discord Bot</p>
                     <p class="text-white/40 text-xs leading-relaxed">Fun bot with GitHub lookup and rating system</p>
                     <p class="text-indigo-400 text-xs mt-2">Python</p>
@@ -64,13 +68,104 @@
 </main>
 <footer class="fixed bottom-6 left-0 right-0 flex justify-center z-50">
     <div class="glass flex items-center gap-4 px-4 py-3 rounded-2xl ring-1 ring-white/20 shadow-2xl">
-        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all" src="2111432.png" height="40" width="40"/>
+        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all active:scale-95" src="2111432.png" height="40" width="40"/>
 
-        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all" src="5968756.png" height="40" width="40"/>
+        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all active:scale-95" src="5968756.png" height="40" width="40"/>
 
-        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all" src="safari-icon-0.png" height="40" width="40"/>
-    </div>
+        <img id="searchbtn" class="rounded-xl hover:-translate-y-2 hover:scale-125  transition-all active:scale-95" src="safari-icon-0.png" height="40" width="40"/>
+        <button id="aboutme-btn" href="#" class="active:scale-95 w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center hover:scale-125 transition-all hover:-translate-y-2 text-white text-xs shadow-lg">
+            abt.me
+        </button>
+        <img id="contact-btn" class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all active:scale-95" src="abf196bfb9b2a65bd64ed7ad0bfdb333.png" height="40" width="40"/>
+
+
 </footer>
+<div id="aboutme-window" class="glass rounded-2xl overflow-hidden max-w-sm w-full shadow-2xl border border-white/10">
+
+    <!-- Title bar -->
+    <div class="glass px-4 py-3 flex items-center gap-2 border-b border-white/10">
+        <div class="w-3 h-3 rounded-full bg-red-400 hover:scale-110 transition-all cursor-pointer"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-400 hover:scale-110 transition-all"></div>
+        <div class="w-3 h-3 rounded-full bg-green-400 hover:scale-110 transition-all"></div>
+        <div class="glass2 flex-1 rounded-lg py-1 text-center">
+            <p class="text-white/50 text-xs">about.me</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6">
+        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+            <div class="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">RB</div>
+            <div>
+                <p class="text-white font-semibold">RagingBurger</p>
+                <p class="text-white/40 text-xs mt-1">Teenage developer</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-3 mb-6">
+            <div class="flex justify-between items-center">
+                <p class="text-white/30 text-xs uppercase tracking-widest">Location</p>
+                <p class="text-white/70 text-xs">Netherlands 🇳🇱</p>
+            </div>
+            <div class="flex justify-between items-center">
+                <p class="text-white/30 text-xs uppercase tracking-widest">Age</p>
+                <p class="text-white/70 text-xs">Teenager</p>
+            </div>
+            <div class="flex justify-between items-center">
+                <p class="text-white/30 text-xs uppercase tracking-widest">Interests</p>
+                <p class="text-white/70 text-xs">Coding, gaming, music, anime</p>
+            </div>
+            <div class="flex justify-between items-center">
+                <p class="text-white/30 text-xs uppercase tracking-widest">Currently learning</p>
+                <p class="text-white/70 text-xs">Python, JS, CSS</p>
+            </div>
+        </div>
+        <p class="text-white/30 text-xs uppercase tracking-widest mb-3">Skills</p>
+        <div class="flex gap-2 flex-wrap mb-6">
+            <span class="text-xs px-3 py-1 rounded-full border border-white/10 text-white/50">JavaScript</span>
+            <span class="text-xs px-3 py-1 rounded-full border border-white/10 text-white/50">Python</span>
+            <span class="text-xs px-3 py-1 rounded-full border border-white/10 text-white/50">HTML / CSS</span>
+            <span class="text-xs px-3 py-1 rounded-full border border-white/10 text-white/50">Tailwind</span>
+        </div>
+        <div class="glass2 rounded-xl p-4">
+            <p class="text-white/50 text-xs leading-relaxed">👋 Hi! I'm a teenage developer from the Netherlands. I make websites, Discord bots and whatever else sounds fun. Always learning something new.</p>
+        </div>
+    </div>
+</div>
+<div id="contact-window" class="glass rounded-2xl overflow-hidden max-w-sm w-full shadow-2xl border border-white/10">
+    <div class="glass px-4 py-3 flex items-center gap-2 border-b border-white/10">
+        <div class="w-3 h-3 rounded-full bg-red-400 hover:scale-110 transition-all cursor-pointer"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-400 hover:scale-110 transition-all"></div>
+        <div class="w-3 h-3 rounded-full bg-green-400 hover:scale-110 transition-all"></div>
+        <div class="glass2 flex-1 rounded-lg py-1 text-center">
+            <p class="text-white/50 text-xs">contact.info</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 flex flex-col gap-3">
+
+        <div class="glass2 rounded-xl px-4 py-3 flex items-center justify-between">
+            <div>
+                <p class="text-white/30 text-xs uppercase tracking-widest mb-1">Email</p>
+                <p class="text-white/70 text-xs">ragingburger668@gmail.com</p>
+            </div>
+            <button id="copy-email" class="text-xs text-white/40 hover:text-white transition-colors px-3 py-1 glass2 rounded-lg">
+                Copy
+            </button>
+        </div>
+
+        <a href="https://github.com/ragingburger1243" target="_blank" class="glass2 rounded-xl px-4 py-3 flex items-center justify-between hover:bg-white/10 transition-all">
+            <div>
+                <p class="text-white/30 text-xs uppercase tracking-widest mb-1">GitHub</p>
+                <p class="text-white/70 text-xs">https://github.com/ragingburger1243</p>
+            </div>
+            <span class="text-white/30 text-xs">↗</span>
+        </a>
+
+
+    </div>
+</div>
+
 <script src="index.js"></script>
 
 </body>
