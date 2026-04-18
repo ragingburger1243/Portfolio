@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -8,8 +8,8 @@
 </head>
 <body class="min-h-screen" style="background-image: url('macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2880x1800-1455.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-<main class="max-w-4xl mx-auto px-20 py-24" id="main-content">
-    <div class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
+<main class="min-h-screen flex items-center justify-center px-8 pb-24">
+    <div id="window" class="rounded-2xl overflow-hidden shadow-xl border border-white/10">
         <!-- Title bar -->
         <div class="glass px-4 py-3 flex items-center gap-2 border-b border-white/10">
             <div class="w-3 h-3 rounded-full bg-red-400 hover:scale-110 transition-all"></div>
@@ -64,12 +64,14 @@
 </main>
 <footer class="fixed bottom-6 left-0 right-0 flex justify-center z-50">
     <div class="glass flex items-center gap-4 px-4 py-3 rounded-2xl ring-1 ring-white/20 shadow-2xl">
-        <img class="hover:-translate-y-2 hover:scale-125 transition-all" src="2111432.png" height="40" width="40"/>
+        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all" src="2111432.png" height="40" width="40"/>
 
-        <img class="hover:-translate-y-2 hover:scale-125 transition-all" src="5968756.png" height="40" width="40"/>
+        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all" src="5968756.png" height="40" width="40"/>
 
-        <img class="hover:-translate-y-2 hover:scale-125 transition-all" src="safari-icon-0.png" height="40" width="40"/>
+        <img class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all" src="safari-icon-0.png" height="40" width="40"/>
     </div>
 </footer>
+<script src="index.js"></script>
+
 </body>
 </html>
