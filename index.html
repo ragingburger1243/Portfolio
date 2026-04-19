@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Title</title>
+    <title>Ragingburger Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen" style="background-image: url('12-Dark.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 <div id="welcome-text" class="fixed inset-0 flex flex-col items-center justify-center z-0 pointer-events-none">
-    <p class="text-white/80 text-5xl font-light">Welcome.</p>
+    <p class="text-white/80 text-5xl font-light ">Welcome.</p>
     <p class="text-white/40 text-xl font-light mt-2">to the calmer side of the internet</p>
     <p class="text-white/40 text-xl font-light mt-2">still not done</p>
 </div>
 <div id="clock-widget" class="fixed inset-20 flex flex-col items-center z-0 pointer-events-none">
-    <p id="clock-time" class="text-white/80 font-light" style="font-size: 64px; letter-spacing: -2px;">00:00</p>
+    <p id="clock-time" class="text-white/80 font-light" style="font-size: 100px; letter-spacing: -2px;">00:00</p>
     <p id="clock-date" class="text-white/40 text-sm font-light"></p>
+</div>
+<div id="loading-screen" class="fixed inset-0 z-[99999] flex items-center justify-center" style="background: #181a21;">
+    <div class="grid grid-cols-1 gap-6 mb-8">
+        <p id="loading-text" class="text-white/70 text-sm font-mono tracking-widest">Booting Burger OS</p>
+        <p class="text-white/70 text-sm font-mono tracking-widest">Tip: You can drag the windows</p>
+    </div>
+
 </div>
 
 <main class="min-h-screen flex items-center justify-center px-8 pb-24">
@@ -48,16 +55,36 @@
             <!-- Projects -->
             <p class="text-xs uppercase tracking-widest text-white/30 mb-3">Projects</p>
             <div class="grid grid-cols-2 gap-6 mb-8">
-                <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
-                    <p class="text-white font-medium mb-1">Yo Room</p>
-                    <p class="text-white/40 text-xs leading-relaxed">Yoga studio website with booking and custom cursor</p>
-                    <p class="text-indigo-400 text-xs mt-2">HTML · CSS · JS</p>
-                </div>
+
+                <a href="https://yoroom.nl/index.html" target="_blank">
+                    <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
+                        <p class="text-white font-medium mb-1">Yo Room</p>
+                        <p class="text-white/40 text-xs leading-relaxed">Yoga studio website with booking and custom cursor</p>
+                        <p class="text-indigo-400 text-xs mt-2">HTML · CSS · JS</p>
+                    </div>
+                </a>
+
+
                 <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
                     <p class="text-white font-medium mb-1">Discord Bot</p>
                     <p class="text-white/40 text-xs leading-relaxed">Fun bot with GitHub lookup and rating system</p>
                     <p class="text-indigo-400 text-xs mt-2">Python</p>
                 </div>
+
+                <a href="https://github.com/ragingburger1243/OverComplicatedFizzBuzz" target="_blank">
+                    <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
+                        <p class="text-white font-medium mb-1">OvercomplicatedFizzBuzz</p>
+                        <p class="text-white/40 text-xs leading-relaxed">Overcomplicated Fizzbuzz</p>
+                        <p class="text-indigo-400 text-xs mt-2">Python</p>
+                    </div>
+                </a>
+                <a href="https://github.com/ragingburger1243/Portfolio" target="_blank">
+                    <div class="glass2 rounded-xl p-4 hover:scale-110 active:scale-95 transition-all">
+                        <p class="text-white font-medium mb-1">Portfolio</p>
+                        <p class="text-white/40 text-xs leading-relaxed">The website you are on right now</p>
+                        <p class="text-indigo-400 text-xs mt-2">My portfolio website</p>
+                    </div>
+                </a>
             </div>
             <!-- Links -->
             <p class="text-xs uppercase tracking-widest text-white/30 mb-3">Links</p>
@@ -81,8 +108,10 @@
         <button id="aboutme-btn" href="#" class="active:scale-95 w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center hover:scale-125 transition-all hover:-translate-y-2 text-white text-xs shadow-lg">
             abt.me
         </button>
-        <img id="contact-btn" class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all active:scale-95" src="abf196bfb9b2a65bd64ed7ad0bfdb333.png" height="40" width="40"/>
+        <img id="spotify-btn" class="rounded-xl hover:-translate-y-2 hover:scale-125  transition-all active:scale-95" src="Spotify_icon.svg.png" height="40" width="40"/>
 
+        <img id="contact-btn" class="rounded-xl hover:-translate-y-2 hover:scale-125 transition-all active:scale-95" src="abf196bfb9b2a65bd64ed7ad0bfdb333.png" height="40" width="40"/>
+    </div>
 
 </footer>
 <div id="aboutme-window" class="glass rounded-2xl overflow-hidden max-w-sm w-full shadow-2xl border border-white/10">
@@ -96,7 +125,6 @@
             <p class="text-white/50 text-xs">about.me</p>
         </div>
     </div>
-
     <!-- Content -->
     <div class="p-6">
         <div class="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
@@ -170,7 +198,47 @@
 
     </div>
 </div>
+<div id="spotify-window" class="glass rounded-2xl overflow-hidden shadow-2xl border border-white/10" style="width: 280px;">
 
+    <!-- Title bar -->
+    <div class="glass px-4 py-3 flex items-center gap-2 border-b border-white/10">
+        <div class="w-3 h-3 rounded-full bg-red-400 hover:scale-110 transition-all cursor-pointer"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-400 hover:scale-110 transition-all"></div>
+        <div class="w-3 h-3 rounded-full bg-green-400 hover:scale-110 transition-all"></div>
+        <div class="glass2 flex-1 rounded-lg py-1 text-center">
+            <p class="text-white/50 text-xs">now playing</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-5 flex flex-col gap-4">
+
+        <!-- Album art -->
+        <div class="w-full aspect-square rounded-xl glass2 flex items-center justify-center border border-white/5">
+            <p class="text-4xl">🎵</p>
+        </div>
+
+        <div>
+            <p class="text-white/80 text-sm font-medium">Lo-fi Chill Mix</p>
+            <p class="text-white/40 text-xs mt-1">coding session </p>
+        </div>
+        <div class="flex items-center justify-between">
+            <button class="text-white/30 hover:text-white transition-colors text-lg">⏮</button>
+            <button id="play-btn" class="w-10 h-10 rounded-full flex items-center justify-center text-white/70 hover:text-white transition-all hover:scale-110 active:scale-95">
+                <span id="play-icon">▶</span>
+            </button>
+            <button class="text-white/30 hover:text-white transition-colors text-lg">⏭</button>
+        </div>
+
+    </div>
+</div>
+<div id="notepad-window" class="glass rounded-2xl overflow-hidden shadow-2xl border border-white/10" style="width: 280px;">
+
+</div>
+
+<audio id="myAudio">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 <script src="index.js"></script>
 
 </body>

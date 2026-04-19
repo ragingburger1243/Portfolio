@@ -58,10 +58,10 @@ img{
     opacity: 1;
     pointer-events: auto;
 }
-#window, #aboutme-window, #contact-window {
+#window, #aboutme-window, #contact-window, #spotify-window {
     pointer-events: none;
 }
-#window.show, #aboutme-window.show, #contact-window.show {
+#window.show, #aboutme-window.show, #contact-window.show, #spotify-window.show {
     pointer-events: auto;
 }
 #contact-window.show {
@@ -74,4 +74,19 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+}
+
+#spotify-window {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 100;
+}
+#spotify-window.show {
+    opacity: 1;
+    pointer-events: auto;
 }
